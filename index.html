@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+body{
+background-color: lavenderblush;
+}
+
+    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ryn.Cab-Transportation App</title>
+</head>
+<body>
+
+  <header id="top">
+    <h1>Ryn.Cab</h1>
+    <p><em>Your Adventure Starts here</em></p>
+    <nav>
+      <a href="#book">Book a Ride</a> |
+      <a href="#fleet">Our Vehicles</a> |
+      <a href="#media">Media</a> |
+      <a href="#schedule">Schedule</a> |
+      <a href="#contact">Contact</a>
+    </nav>
+    <hr>
+  </header>
+  <main>
+
+    <section id="book">
+      <h2>Book a Ride</h2>
+      <form action="#" method="post">
+        <fieldset>
+          <legend>Trip Details</legend>
+
+          <p>
+            <label for="fullname">Full name:</label>
+            <input type="text" id="fullname" name="fullname" placeholder="Lastname, Firstname" required>
+          </p>
+
+          <p>
+            <label for="phone">Phone number:</label>
+            <input type="tel" id="phone" name="phone" placeholder="09XX XXX XXXX" required>
+          </p>
+
+          <p>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="@gmail.com">
+          </p>
+
+          <p>
+            <label for="pickup">Pick-up location:</label>
+            <input type="text" id="pickup" name="pickup" list="places" placeholder="Enter Pick-up location ">
+          </p>
+
+          <p>
+            <label for="dropoff">Drop-off location:</label>
+            <input type="text" id="dropoff" name="dropoff" list="places">
+          </p>
+
+          <datalist id="places">
+            <option value="SM Baguio">
+            <option value="Lions Head">
+            <option value="Strawberry Farm">
+            <option value="The mansion">
+            <option value="Mines View">
+          </datalist>
+
+          <p>
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+          </p>
+
+          <p>
+            <label for="time">Time:</label>
+            <input type="time" id="time" name="time" required>
+          </p>
+
+          <p>
+            <label for="passengers">Passengers:</label>
+            <input type="number" id="passengers" name="passengers" min="1" max="10" value="1">
+          </p>
+
+          <p>
+            <label for="vehicle">Vehicle type:</label>
+            <select id="vehicle" name="vehicle">
+              <option value="taxi">Taxi</option>
+              <option value="van">Van</option>
+              <option value="shuttle">Shuttle Bus</option>
+              <option value="motorcycle">Motorcycle Taxi</option>
+              <option value="tricycle">Tricycle</option>
+            </select>
+          </p>
+
+          <p>
+            Payment method:
+            <input type="radio" id="pay-cash" name="payment" value="cash" checked>
+            <label for="pay-cash">Cash</label>
+            <input type="radio" id="pay-card" name="payment" value="card">
+            <label for="pay-card">Card</label>
+            <input type="radio" id="pay-ewallet" name="payment" value="ewallet">
+            <label for="pay-ewallet">E-Wallet</label>
+          </p>
+
+          <p>
+            Extras:
+            <input type="checkbox" id="extra-luggage" name="extras" value="luggage">
+            <label for="extra-luggage">Extra luggage</label>
+            <input type="checkbox" id="extra-child" name="extras" value="child-seat">
+            <label for="extra-child">Child seat</label>
+            <input type="checkbox" id="extra-wheelchair" name="extras" value="wheelchair">
+            <label for="extra-wheelchair">Wheelchair accessible</label>
+          </p>
+
+          <p>
+            <label for="notes">Notes for the driver:</label><br>
+            <textarea id="notes" name="notes" rows="4" cols="40" placeholder="note to driver eg:Landmarks"></textarea>
+          </p>
+
+          <p>
+            <input type="checkbox" id="terms" name="terms" required>
+            <label for="terms">I agree to the <a href="#terms-info">Terms & Conditions</a></label>
+          </p>
+
+          <p>
+            <button type="submit">Book Now</button>
+            <button type="reset">Clear</button>
+          </p>
+        </fieldset>
+      </form>
+      <hr>
+    </section>
+
+    <section id="fleet">
+      <h2>Our Vehicles</h2>
+
+      <figure>
+        <img src="Taxi.jpg" alt="A white taxi" width="400" height="250">
+        <figcaption><strong>Taxi</strong> - Fast and comfortable, up to 4 passengers.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="Van.jpg" alt="A white GoRide van with sliding doors" width="400" height="250">
+        <figcaption><strong>Van</strong> - Spacious Vehicle that can accommodate families and small groups.</figcaption>
+      </figure>
+
+      <figure>
+        <img src="bus.jpg" alt="A GoRide shuttle bus on a city road" width="400" height="250">
+        <figcaption><strong>Shuttle Bus</strong> - Affordable seats for large groups.</figcaption>
+      </figure>
+
+      <p><small>Note: These are placeholder images and can be replaced with real photos of your vehicles.</small></p>
+      <hr>
+    </section>
+
+    <section id="media">
+      <h2>Media</h2>
+
+      <h3>How Ryn.Cab Works</h3>
+      <video width="480" controls poster="https://www.youtube.com/watch?v=W-WqIIVHrHU&pp=ygUpaG93IHRvIHVzZSB0cmFuc3BvcnRhdGlvbiBhcHAgcGhpbGlwcGluZXM%3D">
+        <source src="How to use Ryn.cab.mp4" type="video/mp4">
+        <source src="How to use Ryn.cab.mp4" type="video/ogg">
+        
+      </video>
+
+      <h3>Driver Announcement</h3>
+      <audio controls>
+        <source src="media/announcement.mp3" type="audio/mpeg">
+        <source src="media/announcement.ogg" type="audio/ogg">
+      </audio>
+
+      <h3>Watch on YouTube</h3>
+      <iframe
+        width="560"
+        height="315"
+        src="https://www.youtube.com/embed/jNQXAC9IVRw"
+        title="YouTube video player"
+        allowfullscreen>
+      </iframe>
+      <hr>
+    </section>
+
+    <section id="schedule">
+      <h2>Shuttle Schedule</h2>
+
+      <table border="1" cellpadding="6" cellspacing="0">
+        <caption>Daily departures from Baguio Terminal</caption>
+        <thead>
+          <tr>
+            <th>Route</th>
+            <th>Departure</th>
+            <th>Arrival</th>
+            <th>Fare</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Terminal to Camp John Hay</td>
+            <td>8:00 AM</td>
+            <td>8:30 AM</td>
+            <td>12.00</td>
+          </tr>
+          <tr>
+            <td>Terminal to University of baguio</td>
+            <td>7:00 AM</td>
+            <td>7:30 AM</td>
+            <td>14.00</td>
+          </tr>
+          <tr>
+            <td>Terminal to Loakan Airport</td>
+            <td>10:00 AM</td>
+            <td>11:00 AM</td>
+            <td>16.00</td>
+          </tr>
+          <tr>
+            <td>Terminal to SM Baguio</td>
+            <td>11:30 AM</td>
+            <td>12:00 PM</td>
+            <td>11.50</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <h3>Check Your Route</h3>
+      <form action="#" method="get">
+        <p>
+          <label for="route">Choose a route:</label>
+          <select id="route" name="route">
+            <option value="city-hall">Terminal to Camp John Hay</option>
+            <option value="university">Terminal to University of baguio</option>
+            <option value="airport">Terminal to Loakan Airport</option>
+            <option value="public-market">Terminal to SM Baguio</option>
+          </select>
+          <button type="submit">Search</button>
+        </p>
+      </form>
+      <hr>
+    </section>
+
+    <section id="contact">
+      <h2>Contact & Feedback</h2>
+
+      <form action="#" method="post" enctype="multipart/form-data">
+        <fieldset>
+          <legend>Send Feedback</legend>
+
+          <p>
+            <label for="fb-name">Your name:</label>
+            <input type="text" id="fb-name" name="fb-name" required>
+          </p>
+
+          <p>
+            <label for="rating">Rate your ride (1-5):</label>
+            <input type="range" id="rating" name="rating" min="1" max="5" value="5">
+          </p>
+
+          <p>
+            <label for="topic">Topic:</label>
+            <select id="topic" name="topic">
+              <option value="compliment">Compliment</option>
+              <option value="complaint">Complaint</option>
+              <option value="lost-item">Lost item</option>
+              <option value="suggestion">Suggestion</option>
+            </select>
+          </p>
+
+          <p>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="5" cols="40" required></textarea>
+          </p>
+
+          <p>
+            <label for="photo">Attach a photo (optional):</label>
+            <input type="file" id="photo" name="photo" accept="image/*">
+          </p>
+
+          <p>
+            <button type="submit">Send Feedback</button>
+          </p>
+        </fieldset>
+      </form>
+
+      <h3>Reach Us</h3>
+      <address>
+        <strong>Ryn.Cab Transport Co.</strong><br>
+        366 Loakan Liwanag<br>
+        Baguio City, Philippines<br>
+        Phone: <a href="tel:+639912806534">+63 991 280 6534</a><br>
+        Email: <a href="mailto:RynCab@gmail.com">RynCab@gmail.com</a>
+      </address>
+      <hr>
+    </section>
+
+    <section id="links">
+      <h2>Useful Links</h2>
+      <ul>
+        <li><a href="https://www.openstreetmap.org/" target="_blank" rel="noopener">OpenStreetMap</a></li>
+        <li><a href="https://maps.google.com/" target="_blank" rel="noopener">Google Maps</a></li>
+        <li><a href="https://www.facebook.com/" target="_blank" rel="noopener">Ryn.Cab on Facebook</a></li>
+        <li><a href="#top">Back to top</a></li>
+      </ul>
+    </section>
+
+    <section id="terms-info">
+      <h2>Terms & Conditions</h2>
+      <details>
+        <summary>Read the terms</summary>
+        <ol>
+          <li>fees may change depending on the distance, traffic, and during busy hours. </li>
+          <li>Cancellations of booking may be charged a fee.</li>
+          <li>If the passenger didnt arrive at the selected pick-up location in about 15min the driver may cancel the booking. </li>
+        </ol>
+      </details>
+    </section>
+
+  </main>
+
+  <footer>
+    <hr>
+    <p> 2026 Ryn.cab Transport Co. Michaella Sheryn E. Carorocan</p>
+  </footer>
+
+</body>
+</html>
